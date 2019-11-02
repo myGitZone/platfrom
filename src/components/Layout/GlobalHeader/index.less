@@ -1,0 +1,118 @@
+@import '~antd/es/style/themes/default.less';
+
+@global-header-prefix-cls: ~'@{ant-prefix}-pro-global-header ';
+
+@pro-header-bg: @component-background;
+@pro-header-hover-bg: @component-background;
+@pro-header-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+
+.@{global-header-prefix-cls} {
+  position: relative;
+  height: 50px;
+  padding: 0;
+  background: #1c1d24;
+  box-shadow: @pro-header-box-shadow;
+
+  &-logo {
+    display: inline-block;
+    height: @layout-header-height;
+    padding: 0 0 0 24px;
+    font-size: 20px;
+    line-height: @layout-header-height;
+    vertical-align: top;
+    cursor: pointer;
+
+    img {
+      display: inline-block;
+      width: 32px;
+      vertical-align: middle;
+    }
+  }
+
+  &-menu {
+    .anticon {
+      margin-right: 8px;
+    }
+
+    .ant-dropdown-menu-item {
+      min-width: 160px;
+    }
+  }
+
+  &-trigger {
+    height: @layout-header-height;
+    padding: ~'calc((@{layout-header-height} - 26px) / 2)' 24px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s, padding 0s;
+
+    &:hover {
+      background: @pro-header-hover-bg;
+    }
+  }
+
+  .dark {
+    height: @layout-header-height;
+
+    .action {
+      color: rgba(255, 255, 255, 0.85);
+
+      > i {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      &:hover,
+      &.opened {
+        background: @primary-color;
+      }
+
+      .ant-badge {
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+  }
+}
+
+.selectsys {
+  position: relative;
+  height: 50px;
+  width: 316px;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #333a51;
+  font-size: 16px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("./images/line.png");
+  }
+}
+
+.sysmenu {
+  background-color: #464f6b !important;
+  border: 1px solid #2a69cb !important;
+
+  :global {
+    .ant-dropdown-menu-item {
+      color: #fff;
+      text-align: center;
+      &:hover {
+        background-color: #333a51 !important;
+      }
+    }
+
+    .ant-dropdown-menu-item-selected {
+      background-color: #333a51 !important;
+    }
+  }
+}
+

@@ -1,0 +1,73 @@
+{
+  "name": "bonclayout",
+  "version": "1.0.17",
+  "main": "lib/index.js",
+  "module": "es/index.esm.js",
+  "scripts": {
+    "start": "umi dev",
+    "build": "father-build build",
+    "build-lib": "father-build build",
+    "test": "umi test",
+    "lint:es": "eslint --ext .js src mock tests",
+    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/lodash": "^4.14.135",
+    "@types/memoize-one": "^4.1.1",
+    "@types/react-copy-to-clipboard": "^4.2.6",
+    "antd": "^3.19.5",
+    "classnames": "^2.2.6",
+    "dva": "^2.6.0-beta.6",
+    "father-build": "^1.3.4",
+    "history": "^4.9.0",
+    "lodash": "^4.17.11",
+    "memoize-one": "^5.0.4",
+    "omit.js": "^1.0.2",
+    "path-to-regexp": "^3.0.0",
+    "react": "^16.8.6",
+    "react-container-query": "^0.11.0",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.8.6",
+    "react-media-hook2": "^1.1.2",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/react": "^16.7.18",
+    "@types/react-document-title": "^2.0.3",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-test-renderer": "^16.0.3",
+    "@umijs/fabric": "^1.1.7",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "react-test-renderer": "^16.7.0",
+    "redux": "^4.0.4",
+    "slash2": "^2.0.0",
+    "umi": "^2.7.0",
+    "umi-plugin-react": "^1.8.0",
+    "umi-types": "^0.2.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
